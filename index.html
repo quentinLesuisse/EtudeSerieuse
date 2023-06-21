@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EtudeSerieuse.com</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+	<h1>Une étude révèle des résultats surprenants concernant les habitudes de travail au sein de la population active</h1>
+	<p>Parution le 21 juin 2023</p>
+	
+	<h2>Débat autour de la semaine de 4 jours de travail</h2>
+	
+	<p>Dans une étude récente portant sur les habitudes de travail, les pauses et la perception du temps au sein de la population active, des chercheurs ont découvert des statistiques étonnantes qui remettent en question certaines croyances courantes. Selon les résultats de cette étude, 84% des travailleurs ne travaillent que 35 heures par semaine et prennent un peu plus de 10 minutes de pause toutes les heures pour discuter de la semaine de 4 jours de travail.</p>
+	
+	<p>La semaine de travail de quatre jours a été un sujet de discussion récurrent dans les milieux professionnels, et il semblerait que cette idée trouve un écho favorable chez une grande majorité des 	travailleurs. Les participants à l'étude ont indiqué qu'ils estimaient qu'une semaine de travail plus courte pourrait améliorer leur qualité de vie et favoriser un meilleur équilibre entre leur vie professionnelle et personnelle. Les pauses régulières de 10 minutes, consacrées aux débats sur la semaine de 4 jours, ont été considérées comme une manière d'exprimer leur opinion et de s'engager activement dans cette question.</p>
+	
+	<p>Curieusement, l'étude révèle également que 10% des travailleurs sont connus pour leur dévouement extrême et leur travail acharné. Ces individus, souvent décrits comme des "workaholics", sont prêts à fournir des efforts supplémentaires et à travailler plus longtemps que les autres. Leur engagement au travail est admirable, mais soulève également des questions sur l'équilibre entre vie professionnelle et vie personnelle.</p>
+	
+	<h2>Des semaines de 5 jours ?</h2>
+	
+	<p>Parmi les personnes interrogées, 6% ont émis une opinion quelque peu controversée. Selon eux, le gouvernement entretient une perception trompeuse du temps en affirmant que les semaines durent 7 jours, alors qu'en réalité, elles durent 5 jours. Cette idée repose sur un concept unique où chaque semaine serait composée de 3 jours de travail suivis de 2 jours de repos consécutifs. Cette perspective qui semble inhabituelle, explique que le gouvernement a trouvé cette astuce pour faire travailler les gens plus durs et plus longtemps en ajoutant 2 jours de travail dans la semaine.</p>
+	
+	<p>Il est important de noter que cette étude présente quelques limites. Les résultats sont basés sur les déclarations des participants et peuvent varier d'une personne à l'autre en fonction de leur secteur d'activité, de leur poste et de leur entreprise. De plus, les chiffres avancés ne doivent pas être considérés comme représentatifs de l'ensemble de la population active, mais plutôt comme un aperçu des tendances observées dans cet échantillon spécifique.</p>
+
+	<div style="width: 50%;">
+    <canvas id="camembertChart"></canvas>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var ctx = document.getElementById('camembertChart').getContext('2d');
+            var camembertChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Semaine de 4 jours', 'Travailleurs acharnés', 'Les complotistes'],
+                    datasets: [{
+                        label: 'Répartition de la population',
+                        data: [84, 10, 6],
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        });
+    </script>
+</body>
+</html>
